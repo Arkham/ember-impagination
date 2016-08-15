@@ -30,7 +30,7 @@ export default Ember.Component.extend({
       observe: (datasetState)=> {
         Ember.run(() => {
           this.safeSet('datasetState', datasetState);
-          this.sendAction('on-observe', this.get('records'), this._actions);
+          this.sendAction('on-observe', this.get('records'), this.actions);
         });
       }
     });
